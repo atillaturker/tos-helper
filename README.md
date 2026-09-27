@@ -1,75 +1,34 @@
-# React + TypeScript + Vite
+# ToS Helper — Town of Salem Companion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based companion tool for **Town of Salem** that helps you track roles, record claims, and see the possible role list while browsing the game wiki side-by-side.
 
-Currently, two official plugins are available:
+> **Disclaimer:** This project is an unofficial fan-made tool. It is not affiliated with, endorsed by, or sponsored by BlankMediaGames or Town of Salem.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
 
-## React Compiler
+ToS Helper is designed to make role management during a Town of Salem match easier. You can enter your own role, add the roles that other players claim, and instantly view a filtered list of possible roles. A built-in wiki panel lets you browse role pages and game mechanics without leaving the page.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- **Role Tracker** — Enter your own role to keep track of your current game state.
+- **Claim Logger** — Record roles claimed by other players.
+- **Possible Role List** — See which roles are still possible based on the information you have entered.
+- **All Roles Overview** — View the full role list at a glance.
+- **Embedded Wiki Sidebar** — Browse the Town of Salem wiki directly from the app.
+- **Side-by-Side Layout** — Keep the role tracker and wiki visible at the same time.
+- **Persistent Session** — Your entered roles and claims remain saved in the browser (e.g., via `localStorage`).
+- **Responsive Design** — Works on desktop and smaller screens.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Screenshots
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+> Add screenshots or GIFs here to show the role tracker, claim input, possible role list, and wiki sidebar.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Role Tracker | Wiki Sidebar |
+|--------------|--------------|
+| ![Role Tracker](screenshots/role-tracker.png) | ![Wiki Sidebar](screenshots/wiki-sidebar.png) |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Demo
 
-```
+> Add a link to the live demo here.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+**Live Demo:** [https://example.com](https://example.com)
